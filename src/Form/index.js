@@ -1,16 +1,16 @@
 import { useState } from "react";
 import "./style.css";
 
-const Form = ({ addNewAmount, chosenCurrency }) => {
+const Form = ({ calculateResult }) => {
   const [newAmount, setNewAmount] = useState(0);
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    addNewAmount(newAmount);
+    calculateResult(newAmount);
   };
 
   return (
-        <form className="form">
+        <form onSubmit={onFormSubmit} className="form">
         <fieldset className="form__fieldset">
             <legend className="form__legend">Przelicznie wartości EUR</legend>
             <p>
@@ -18,7 +18,13 @@ const Form = ({ addNewAmount, chosenCurrency }) => {
                     <span className="form__labelText">
                         Podaj wartość w PLN:
                     </span>
-                    <input className="form__field" required type="number" min="0" max="1000000" step="0.01" />
+                    <input
+                      value={newAmount}
+                      onChange={({ target }) => setNewAmount(target.value)}
+                      className="form__field"
+                      required
+                      type="number" min="0" max="1000000" step="0.01"
+                    />
                 </label>
             </p>
             <p>
