@@ -1,9 +1,8 @@
 import "./style.css";
 
-const ResultBox = (props) => (
+const ResultBox = ({ newAmount }) => (
   <p className="resultBox">
-    Za <strong>0,00</strong> PLN kupisz <strong> N/A </strong>
-    <span></span>
+    Za <span>{newAmount}</span> PLN kupisz <span> N/A </span>
   </p>
 );
 
