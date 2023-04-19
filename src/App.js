@@ -4,13 +4,20 @@ import Container from "./Container";
 import { useState } from "react";
 
 function App() {
-  const [rate, setRate] = useState([
+  const [currencyRate, setCurrencyRate] = useState([
     {key: "EUR", rate: 4.6286},
     {key: "USD", rate: 4.2151},
     {key: "GBP", rate: 5.2428},
   ]);
-  const calculateResult = (newAmount) => {
+  const [result, setResult] = useState(0);
 
+  const chooseCurrency = (key) => {
+    setCurrencyRate(currencyRate => currencyRate.filter(value => value.key === key));
+  };
+
+  const calculateResult = (amount, key) => {
+    chooseCurrency(key);
+    setResult(result => result = amount / currencyRate.rate);
   };
   
   return (
