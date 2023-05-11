@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./style.css";
 
 const Form = ({ calculateResult }) => {
-    const [newValue, setnewValue] = useState(0);
+    const [newValue, setNewValue] = useState("");
     const [currency, setCurrency] = useState("EUR");
 
     const onFormSubmit = (event) => {
@@ -21,7 +21,7 @@ const Form = ({ calculateResult }) => {
                         </span>
                         <input
                             value={newValue}
-                            onChange={({ target }) => setnewValue(target.value)}
+                            onChange={({ target }) => setNewValue(target.value)}
                             className="form__field"
                             required
                             type="number" min="0" max="1000000" step="0.01"
