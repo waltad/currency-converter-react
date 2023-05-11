@@ -4,20 +4,21 @@ import Container from "./Container";
 import { useState } from "react";
 
 function App() {
-  const [currencyRate, setCurrencyRate] = useState([
-    {key: "EUR", rate: 4.6286},
-    {key: "USD", rate: 4.2151},
-    {key: "GBP", rate: 5.2428},
-  ]);
+  const currencyTable = [
+    {name: "EUR", rate: 4.6286},
+    {name: "USD", rate: 4.2151},
+    {name: "GBP", rate: 5.2428},
+  ];
   const [result, setResult] = useState(0);
+  const [currencyRate, setCurrencyRate] = useState([{}]);
 
-  const chooseCurrency = (key) => {
-    setCurrencyRate(currencyRate => currencyRate.filter(value => value.key === key));
+  const chooseCurrency = (name) => {
+    setCurrencyRate(currencyRate => currencyRate = currencyTable.filter(value => value.name === name));
   };
 
-  const calculateResult = (amount, key) => {
-    chooseCurrency(key);
-    setResult(result => result = amount / currencyRate.rate);
+  const calculateResult = (amount, name) => {
+    chooseCurrency(name);
+    setResult(result => result = +amount / currencyRate[0].rate);
   };
   
   return (
@@ -25,7 +26,10 @@ function App() {
       <Form
         calculateResult={calculateResult}
       />
-      <ResultBox />
+      <ResultBox
+        result={result}
+        currencyRate={currencyRate}
+      />
     </Container>
   );
 }
