@@ -9,16 +9,11 @@ function App() {
     {name: "USD", rate: 4.2151},
     {name: "GBP", rate: 5.2428},
   ];
-  const [result, setResult] = useState(0);
-  const [currencyRate, setCurrencyRate] = useState([{}]);
-
-  const chooseCurrency = (name) => {
-    setCurrencyRate(currencyRate => currencyRate = currencyTable.filter(value => value.name === name));
-  };
+  const [result, setResult] = useState({});
 
   const calculateResult = (amount, name) => {
-    chooseCurrency(name);
-    setResult(result => result = +amount / currencyRate[0].rate);
+    const rate = currencyTable.find(value => value.name === name).rate;
+    setResult({value: +amount, outcome: +amount / rate, currency: name});
   };
   
   return (
@@ -28,7 +23,6 @@ function App() {
       />
       <ResultBox
         result={result}
-        currencyRate={currencyRate}
       />
     </Container>
   );

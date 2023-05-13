@@ -1,8 +1,8 @@
 import "./style.css";
 
-const ResultBox = ({ newValue, result, currencyRate }) => (
+const ResultBox = ({ result }) => (
   <p className="resultBox">
-    Za <span>{newValue ? newValue : 0}</span> PLN kupisz <span>{result ? result.toFixed(2) : "N/A"} {currencyRate[0].name}</span>
+    Za <span>{result.value ? (result.value).toFixed(2) : 0}</span> PLN kupisz <span>{result.outcome ?(result.outcome).toFixed(2) : "N/A"} {result.currency}</span>
   </p>
 );
 
