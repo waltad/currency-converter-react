@@ -1,5 +1,6 @@
 # Currency converter
-## Currency calculator.
+
+## Currency calculator
 
 ![Currency converter in React - Presentation](public/img/introduction.gif)
 
@@ -11,9 +12,9 @@ It is a currency calculator that is used to convert the PLN currency value to su
 
 ## Demo
 
-https://waltad.github.io/currency-converter-react/
+<https://waltad.github.io/currency-converter-react/>
 
-# Description
+## Description
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 Project made as part of training exercises in Java Script and tools supporting work in the frontend.
