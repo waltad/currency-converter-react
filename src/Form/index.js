@@ -39,12 +39,12 @@ const Form = ({ calculateResult }) => {
               onChange={({ target }) => setCurrency(target.value)}
               className="form__field"
             >
-              {currencyTable.map((currency => (
+              {currencyTable.map((valueDate => (
                 <option
-                  key={currency.name}
-                  value={currency.name}
+                  key={valueDate.name}
+                  value={valueDate.name}
                 >
-                  {currency.name}
+                  {valueDate.name}
                 </option>
               )))}
             </select>
