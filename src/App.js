@@ -1,5 +1,5 @@
 import Form from "./Form";
-import ResultBox from "./ResultBox";
+import Result from "./Result";
 import Container from "./Container";
 import { currencyTable } from "./currencytable";
 import { useState } from "react";
@@ -21,7 +21,7 @@ function App() {
       <Form
         calculateResult={calculateResult}
       />
-      <ResultBox
+      <Result
         result={result}
       />
     </Container>
