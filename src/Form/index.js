@@ -14,7 +14,7 @@ const Form = ({ calculateResult }) => {
   return (
     <form onSubmit={onFormSubmit} className="form">
       <fieldset className="form__fieldset">
-        <legend className="form__legend">Przelicznie wartości EUR</legend>
+        <legend className="form__legend">Przelicznik walut</legend>
         <p>
           <label>
             <span className="form__labelText">
