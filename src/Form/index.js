@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./style.css";
 import { currencyTable } from "../currencytable";
+import Clock from "../Clock";
 
 const Form = ({ calculateResult }) => {
   const [newValue, setNewValue] = useState("");
@@ -15,6 +16,11 @@ const Form = ({ calculateResult }) => {
     <form onSubmit={onFormSubmit} className="form">
       <fieldset className="form__fieldset">
         <legend className="form__legend">Przelicznik walut</legend>
+        <p>
+          Dzisiaj jest {Clock().toLocaleDateString(undefined, {
+            month: "long", weekday: "long", day: "numeric", year: "numeric"
+          },)} {Clock().toLocaleTimeString()}
+        </p>
         <p>
           <label>
             <span className="form__labelText">

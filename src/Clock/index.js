@@ -12,6 +12,7 @@ const Clock = () => {
       clearInterval(IntervalId);
     }
   }, []);
+  return newDate;
 };
 
 export default Clock;
