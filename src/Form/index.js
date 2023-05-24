@@ -16,10 +16,10 @@ const Form = ({ calculateResult }) => {
     <form onSubmit={onFormSubmit} className="form">
       <fieldset className="form__fieldset">
         <legend className="form__legend">Przelicznik walut</legend>
-        <p>
+        <p className="clock">
           Dzisiaj jest {Clock().toLocaleDateString(undefined, {
-            month: "long", weekday: "long", day: "numeric", year: "numeric"
-          },)} {Clock().toLocaleTimeString()}
+            month: "long", weekday: "long", day: "numeric"
+          },)}, {Clock().toLocaleTimeString()}
         </p>
         <p>
           <label>
