@@ -1,3 +1,4 @@
+import "./style.css";
 import { useEffect, useState } from "react";
 
 const Clock = () => {
@@ -12,7 +13,18 @@ const Clock = () => {
       clearInterval(IntervalId);
     }
   }, []);
-  return newDate;
+
+  return (
+    <p className="clock">
+      Dzisiaj jest
+      {" "}
+      {newDate.toLocaleDateString(undefined, {
+        month: "long", weekday: "long", day: "numeric"
+      },)},
+      {" "}
+      {newDate.toLocaleTimeString()}
+    </p>
+  );
 };
 
 export default Clock;
