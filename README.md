@@ -19,6 +19,16 @@ It is a currency calculator that is used to convert the PLN currency value to su
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 Project made as part of training exercises in Java Script and tools supporting work in the frontend.
 
+## Tech
+
+Currency calculator uses a number of open source projects to work properly:
+
+- [HTML] - HyperText Markup Language
+- [JS] - JavaScript
+- [CSS] - Cascading Style Sheets
+- [React] - JavaScript library for building JavaScript apps in a browser
+- [BEM] - Blocks, Elements and Modifiers - CSS block naming technology that takes page layout into account
+
 ## Available Scripts
 
 In the project directory, you can run:
