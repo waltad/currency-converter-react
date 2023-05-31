@@ -1,9 +1,10 @@
+import styled from "styled-components";
 
-.result {
+export const StyledResult = styled.p`
   border: none;
   border-radius: 5px;
   padding: 20px;
   margin: 25px 0;
   background-color: hsl(43, 74%, 59%);
   text-align: center;
-}
+`;
