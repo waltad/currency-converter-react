@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./style.css";
+import { Fieldset, Legend, StyledForm } from "./styled";
 import { currencyTable } from "../currencytable";
 import Clock from "../Clock";
 
@@ -13,9 +14,9 @@ const Form = ({ calculateResult }) => {
   };
 
   return (
-    <form onSubmit={onFormSubmit} className="form">
-      <fieldset className="form__fieldset">
-        <legend className="form__legend">Przelicznik walut</legend>
+    <StyledForm onSubmit={onFormSubmit}>
+      <Fieldset>
+        <Legend>Przelicznik walut</Legend>
         <Clock />
         <p>
           <label>
@@ -52,13 +53,13 @@ const Form = ({ calculateResult }) => {
             </select>
           </label>
         </p>
-      </fieldset>
+      </Fieldset>
       <p>
         <button className="form__button">
           Zawierdź
         </button>
       </p>
-    </form>
+    </StyledForm>
   )
 };
 
