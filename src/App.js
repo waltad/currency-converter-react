@@ -1,5 +1,5 @@
-import Form from "./Form";
-import Result from "./Result";
+import Form from "./Container/Form";
+import Result from "./Container/Result";
 import Container from "./Container";
 import { currencyTable } from "./currencytable";
 import { useState } from "react";

@@ -1,5 +1,5 @@
-import { useCurrentDate } from "../useCurrentDate";
-import { StyledClock } from "./styled";
+import { useCurrentDate } from "../../../useCurrentDate";
+import {StyledClock} from "./styled";
 
 const formatDate = (date) => `
   ${date.toLocaleDateString(undefined, {

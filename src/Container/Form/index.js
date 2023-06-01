@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Fieldset, Legend, StyledForm, TextLabel, Input, Label, Button } from "./styled";
-import { currencyTable } from "../currencytable";
-import Clock from "../Clock";
+import { currencyTable } from "../../currencytable";
+import Clock from "./Clock";
 
 const Form = ({ calculateResult }) => {
   const [newValue, setNewValue] = useState("");
