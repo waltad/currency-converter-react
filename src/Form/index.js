@@ -1,6 +1,5 @@
 import { useState } from "react";
-import "./style.css";
-import { Fieldset, Legend, StyledForm } from "./styled";
+import { Fieldset, Legend, StyledForm, TextLabel, Input, Label, Button } from "./styled";
 import { currencyTable } from "../currencytable";
 import Clock from "../Clock";
 
@@ -19,28 +18,26 @@ const Form = ({ calculateResult }) => {
         <Legend>Przelicznik walut</Legend>
         <Clock />
         <p>
-          <label>
-            <span className="form__labelText">
+          <Label>
+            <TextLabel>
               Podaj wartość w PLN:
-            </span>
-            <input
+            </TextLabel>
+            <Input
               value={newValue}
               onChange={({ target }) => setNewValue(target.value)}
-              className="form__field"
               required
               type="number" min="0" max="1000000" step="0.01"
             />
-          </label>
+          </Label>
         </p>
         <p>
-          <label>
-            <span className="form__labelText">
+          <Label>
+            <TextLabel>
               Wybierz walutę:
-            </span>
-            <select
+            </TextLabel>
+            <Input as="select"
               value={currency}
               onChange={({ target }) => setCurrency(target.value)}
-              className="form__field"
             >
               {currencyTable.map((valueDate => (
                 <option
@@ -50,14 +47,14 @@ const Form = ({ calculateResult }) => {
                   {valueDate.name}
                 </option>
               )))}
-            </select>
-          </label>
+            </Input>
+          </Label>
         </p>
       </Fieldset>
       <p>
-        <button className="form__button">
+        <Button>
           Zawierdź
-        </button>
+        </Button>
       </p>
     </StyledForm>
   )
