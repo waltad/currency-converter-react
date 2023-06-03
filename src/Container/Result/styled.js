@@ -5,6 +5,6 @@ export const StyledResult = styled.p`
   border-radius: 5px;
   padding: 20px;
   margin: 25px 0;
-  background-color: hsl(43, 74%, 59%);
+  background-color: ${({theme}) => theme.resultColor};
   text-align: center;
 `;

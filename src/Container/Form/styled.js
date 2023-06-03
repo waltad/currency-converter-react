@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledForm = styled.form``;
 
 export const Fieldset = styled.fieldset`
-  border: 2px solid grey;
+  border: 2px solid ${({theme}) => theme.borderColor};
   border-radius: 5px;
   padding: 20px;
   margin: 25px 0;
@@ -12,8 +12,8 @@ export const Fieldset = styled.fieldset`
 
 export const Legend = styled.legend`
   border: none;
-  background-color: royalblue;
-  color: gold;
+  background-color: ${({theme}) => theme.firstColor};
+  color: ${({theme}) => theme.secondColor};
   padding: 10px;
   border-radius: 5px;
 `;
@@ -28,7 +28,7 @@ export const TextLabel = styled.span`
 `;
 
 export const Input = styled.input`
-  border: 1px solid royalblue;
+  border: 1px solid ${({theme}) => theme.firstColor};
   padding: 10px;
   width: 100%;
   max-width: 150px;
@@ -42,17 +42,17 @@ export const Input = styled.input`
 export const Button = styled.button`
   width: 100%;
   border: none;
-  background-color: royalblue;
+  background-color: ${({theme}) => theme.firstColor};
   color: gold;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
 
   &:hover {
-  background-color: hsl(225, 73%, 65%);
+    filter: brightness(120%);
   }
 
   &:active {
-  background-color: hsl(225, 73%, 70%);
+    filter: brightness(140%);
   }
 `;
