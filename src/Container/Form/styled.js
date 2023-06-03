@@ -7,7 +7,7 @@ export const Fieldset = styled.fieldset`
   border-radius: 5px;
   padding: 20px;
   margin: 25px 0;
-  background-color: hsl(51, 100%, 80%);
+  background-color: ${({theme}) => theme.formColor};
 `;
 
 export const Legend = styled.legend`
