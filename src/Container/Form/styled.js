@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-export const StyledForm = styled.form``;
-
 export const Fieldset = styled.fieldset`
   border: 2px solid ${({theme}) => theme.borderColor};
   border-radius: 5px;
@@ -17,8 +15,6 @@ export const Legend = styled.legend`
   padding: 10px;
   border-radius: 5px;
 `;
-
-export const Label = styled.label``;
 
 export const TextLabel = styled.span`
   width: 100%;

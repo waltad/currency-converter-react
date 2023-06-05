@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Fieldset, Legend, StyledForm, TextLabel, Input, Label, Button } from "./styled";
+import { Fieldset, Legend, TextLabel, Input, Button } from "./styled";
 import { currencyTable } from "../../currencytable";
 import Clock from "./Clock";
 
@@ -13,12 +13,12 @@ const Form = ({ calculateResult }) => {
   };
 
   return (
-    <StyledForm onSubmit={onFormSubmit}>
+    <form onSubmit={onFormSubmit}>
       <Fieldset>
         <Legend>Przelicznik walut</Legend>
         <Clock />
         <p>
-          <Label>
+          <label>
             <TextLabel>
               Podaj wartość w PLN:
             </TextLabel>
@@ -28,10 +28,10 @@ const Form = ({ calculateResult }) => {
               required
               type="number" min="0" max="1000000" step="0.01"
             />
-          </Label>
+          </label>
         </p>
         <p>
-          <Label>
+          <label>
             <TextLabel>
               Wybierz walutę:
             </TextLabel>
@@ -48,7 +48,7 @@ const Form = ({ calculateResult }) => {
                 </option>
               )))}
             </Input>
-          </Label>
+          </label>
         </p>
       </Fieldset>
       <p>
@@ -56,7 +56,7 @@ const Form = ({ calculateResult }) => {
           Zawierdź
         </Button>
       </p>
-    </StyledForm>
+    </form>
   )
 };
 
