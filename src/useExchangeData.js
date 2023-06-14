@@ -9,17 +9,22 @@ export const useExchangeData = () => {
   const [currenciesTable, setCurrenciesTable] = useState({
     state: "loading"
   });
-  
+
   useEffect(() => {
     (async () => {
       try {
         const response = await axios.get(apiUrl);
         const data = response.data;
-        
+        console.log(data);
+        const exchangeRates = (Object.entries(data.rates)).map(currency => ({
+          name: currency[0],
+          rate: currency[1]
+        }));
+
         setCurrenciesTable({
           state: "success",
           date: data.date,
-          rates: data.rates
+          rates: exchangeRates
         });
       } catch (error) {
         setCurrenciesTable({
@@ -29,7 +34,7 @@ export const useExchangeData = () => {
     })();
 
     setTimeout(2000);
-  }, [currenciesTable]);
+  }, []);
 
   return currenciesTable;
 };
