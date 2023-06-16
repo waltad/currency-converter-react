@@ -29,7 +29,8 @@ export const useExchangeRatesData = () => {
         });
       } catch (error) {
         setExchengeRatesData({
-          state: `${error}`
+          state: "error",
+          info: `${error}`
         });
       }
     })();
