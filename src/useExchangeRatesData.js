@@ -16,7 +16,7 @@ export const useExchangeRatesData = () => {
   });
   
   useEffect(() => {
-    (async () => {
+    const getExchangeRatesData = () => (async () => {
       try {
         const response = await axios.get(apiUrl);
         const responseData = response.data;
@@ -34,7 +34,7 @@ export const useExchangeRatesData = () => {
       }
     })();
 
-    setTimeout(2000);
+    setTimeout(getExchangeRatesData, 1000);
   }, []);
 
   return exchangeRatesData;
