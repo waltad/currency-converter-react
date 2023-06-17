@@ -5,10 +5,7 @@
 ![Currency converter in React - Presentation](public/img/introduction.gif)
 
 It is a currency calculator that is used to convert the PLN currency value to such currencies as:
-
-- EUR
-- USD
-- GBP
+EUR, USD, GBP and other. Exchange rate tables is downloaded from the website: <https://api.exchangerate.host>.
 
 ## Demo
 
@@ -26,8 +23,12 @@ Currency calculator uses a number of open source projects to work properly:
 - [HTML] - HyperText Markup Language
 - [JS] - JavaScript
 - [CSS] - Cascading Style Sheets
-- [React] - JavaScript library for building JavaScript apps in a browser
 - [BEM] - Blocks, Elements and Modifiers - CSS block naming technology that takes page layout into account
+- [React] - JavaScript library for building JavaScript apps in a browser
+  - [hooks] - useSate, useFffect
+  - [custom hooks] - useCurrentDate, useEchangeRatesData
+  - [styled-Components]
+- [Axios] - a promise-based HTTP Client for node.js and the browser
 
 ## Available Scripts
 
