@@ -14,17 +14,17 @@ export const useExchangeRatesData = () => {
   const [exchangeRatesData, setExchengeRatesData] = useState({
     state: "loading"
   });
-  
+
   useEffect(() => {
     const getExchangeRatesData = () => (async () => {
       try {
         const response = await axios.get(apiUrl);
-        const responseData = response.data;
-        const exchangeRateTable = getExchangeRateTable(responseData.rates);
-        
+        const { date, rates } = response.data;
+        const exchangeRateTable = getExchangeRateTable(rates);
+
         setExchengeRatesData({
           state: "success",
-          date: responseData.date,
+          date: date,
           rates: exchangeRateTable
         });
       } catch (error) {
