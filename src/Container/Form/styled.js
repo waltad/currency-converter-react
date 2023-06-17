@@ -16,6 +16,17 @@ export const Loading = styled.h2`
   text-align: center;
 `;
 
+export const Error = styled(Loading)`
+  color: red;
+`;
+
+export const InfoAboutRates = styled.p`
+  margin: 30px 0 0 0;
+  font-family:'Courier New', Courier, monospace;
+  font-size: small;
+  text-align: center;
+`;
+
 export const Legend = styled.legend`
   border: none;
   background-color: ${({theme}) => theme.firstColor};
