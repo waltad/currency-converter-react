@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Fieldset, Legend, TextLabel, Input, Button } from "./styled";
+import { Fieldset, Legend, TextLabel, Input, Button, Loading } from "./styled";
 import Clock from "./Clock";
 
 export const Form = ({ calculateResult, exchangeRatesData, currenciesTable}) => {
@@ -15,7 +15,7 @@ export const Form = ({ calculateResult, exchangeRatesData, currenciesTable}) => 
     <form onSubmit={onFormSubmit}>
       {exchangeRatesData.state === "loading" ?
       (
-        <p>Ładuję tebelę kursów</p>
+        <Loading>Ładuję tebelę kursów</Loading>
       ) :
       (
         <>

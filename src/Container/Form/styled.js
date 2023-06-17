@@ -8,6 +8,14 @@ export const Fieldset = styled.fieldset`
   background-color: ${({theme}) => theme.formColor};
 `;
 
+export const Loading = styled.h2`
+  border: 2px solid ${({theme}) => theme.borderColor};
+  border-radius: 5px;
+  padding: 20px;
+  background-color: ${({theme}) => theme.formColor};
+  text-align: center;
+`;
+
 export const Legend = styled.legend`
   border: none;
   background-color: ${({theme}) => theme.firstColor};
